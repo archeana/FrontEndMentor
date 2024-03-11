@@ -1,0 +1,50 @@
+/* variable font */
+@font-face {
+    font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+}
+
+:root {
+    --clr-bg: #ECF2FF;
+    --clr-card-blue: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+    --clr-card-span-blue: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+    --clr-reaction-dark: #FF5555;
+    --clr-reaction-light: linear-gradient(0deg, #FF5555, #FF5555),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    --clr-memory-dark: #FFB21E;
+    --clr-memory-light: linear-gradient(0deg, #FFB21E, #FFB21E),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    --clr-verbal-dark: #00BB8F;
+    --clr-verbal-light: linear-gradient(0deg, #00BB8F, #00BB8F),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    --clr-visual-dark: #1125D6;
+    --clr-visual-light: linear-gradient(0deg, #1125D6, #1125D6),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    --clr-button-sum: #303B59;
+
+    --font-family: 'HankenGrotesk';
+
+    --fw-regular: 500;
+    --fw-bold:700;
+    --fw-black:800;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}

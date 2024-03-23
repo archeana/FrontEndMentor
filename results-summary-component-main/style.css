@@ -1,34 +1,36 @@
 /* variable font */
 @font-face {
-    font-family: 'HankenGrotesk';
-    font-display: swap;
-    font-weight: 100 900;
-    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+  font-family: 'HankenGrotesk';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
 }
 
 :root {
-    --clr-bg: #ECF2FF;
-    --clr-card-blue: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
-    --clr-card-span-blue: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
-    --clr-reaction-dark: #FF5555;
-    --clr-reaction-light: linear-gradient(0deg, #FF5555, #FF5555),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    --clr-memory-dark: #FFB21E;
-    --clr-memory-light: linear-gradient(0deg, #FFB21E, #FFB21E),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    --clr-verbal-dark: #00BB8F;
-    --clr-verbal-light: linear-gradient(0deg, #00BB8F, #00BB8F),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    --clr-visual-dark: #1125D6;
-    --clr-visual-light: linear-gradient(0deg, #1125D6, #1125D6),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-    --clr-button-sum: #303B59;
+  --clr-bg: #ECF2FF;
+  --clr-card-blue: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  --clr-card-span-blue: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+  --clr-reaction-dark: #FF5555;
+  --clr-reaction-light: linear-gradient(0deg, #FF5555, #FF5555),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  --clr-memory-dark: #FFB21E;
+  --clr-memory-light: linear-gradient(0deg, #FFB21E, #FFB21E),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  --clr-verbal-dark: #00BB8F;
+  --clr-verbal-light: linear-gradient(0deg, #00BB8F, #00BB8F),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  --clr-visual-dark: #1125D6;
+  --clr-visual-light: linear-gradient(0deg, #1125D6, #1125D6),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  --clr-button-sum: #303B59;
 
-    --font-family: 'HankenGrotesk';
+  --font-family: 'HankenGrotesk', sans-serif;
 
-    --fw-regular: 500;
-    --fw-bold:700;
-    --fw-black:800;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --br-card: 2rem;
 }
 
 
@@ -48,3 +50,125 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  color: var(--clr-button-sum);
+}
+
+/* breakpoint */
+@media(min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+}
+
+.grid-content {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.grid-content[data-spacing="large"] {
+  gap: 2rem;
+}
+
+.section-title {
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+}
+
+.btn-sum {
+  color: var(--clr-bg);
+  line-height: 1;
+  background-color: var(--clr-button-sum);
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 100vh;
+  cursor: pointer;
+}
+
+.btn-sum:hover,
+.btn-sum:focus-visible {
+  background: var(--clr-card-blue);
+}
+
+.result-summary {
+  /* put the padding on the parent and then we call on the child */
+  --padding: 2.5rem;
+  border-radius: var(--br-card);
+  max-width: 46rem;
+  display: grid;
+}
+
+@media (min-width:600px) {
+  .result-summary {
+    margin-inline: 1rem;
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--br-card);
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem 3rem var(--clr-bg);
+  }
+}
+
+.results,
+.summary {
+  padding: var(--padding);
+}
+
+.results {
+  text-align: center;
+  background: var(--clr-card-blue);
+  color: #CAC9FF;
+  border-radius: 0 0 var(--br-card) var(--br-card);
+}
+
+@media (min-width:600px) {
+  .results {
+    border-radius: var(--br-card);
+  }
+}
+
+.result-score {
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+  ;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.result-score span {
+  display: block;
+  font-size: 5rem;
+  font-weight: var(--fw-black);
+  line-height: 1;
+  color: var(--clr-bg);
+}
+
+.result-rank {
+  color: var(--clr-bg);
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.sum-types {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+

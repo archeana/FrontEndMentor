@@ -13,6 +13,7 @@
   --clr-reaction-dark: #FF5555;
   --clr-reaction-light: linear-gradient(0deg, #FF5555, #FF5555),
     linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+
   --clr-memory-dark: #FFB21E;
   --clr-memory-light: linear-gradient(0deg, #FFB21E, #FFB21E),
     linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
@@ -159,7 +160,7 @@ body {
 
 .summary-line {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -172,3 +173,15 @@ body {
   flex-wrap: wrap;
 }
 
+.react .sum-line-title {
+  color: var(--clr-reaction-dark);
+}
+
+.react {
+ background: linear-gradient(0deg, #FFB9B9, #FFB9B9), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  display: flex;
+}
+
+.sum-score  span{
+  font-weight: var(--fw-black);
+}

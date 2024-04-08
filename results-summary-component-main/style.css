@@ -139,7 +139,6 @@ body {
   width: 12rem;
   margin-inline: auto;
   background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
-  ;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
@@ -160,7 +159,7 @@ body {
 
 .summary-line {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -168,6 +167,7 @@ body {
 
 .sum-types {
   display: flex;
+  flex-direction: ;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -178,10 +178,45 @@ body {
 }
 
 .react {
- background: linear-gradient(0deg, #FFB9B9, #FFB9B9), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
-  display: flex;
+  background: rgba(255, 236, 236, 0.511);
+
 }
 
-.sum-score  span{
-  font-weight: var(--fw-black);
+.memory .sum-line-title {
+  color: var(--clr-memory-dark);
 }
+
+.memory {
+  background: rgba(255, 248, 235, 0.632);
+
+}
+
+.verbal .sum-line-title {
+  color: var(--clr-verbal-dark);
+}
+
+.verbal {
+  background: rgb(244, 254, 249);
+
+}
+
+.visual .sum-line-title {
+  color: var(--clr-visual-dark);
+}
+
+.visual {
+  background: #e8f5ffbd;
+
+}
+
+.sum-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.sum-score span {
+  font-weight: var(--fw-black);
+  }
+
